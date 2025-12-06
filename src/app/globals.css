@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 @import "aos/dist/aos.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 
 
@@ -15,6 +17,16 @@
   background: linear-gradient(90deg, #f15c30, #2575b6);
   
 }
+
+/* Force font-display: swap for Font Awesome */
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/_next/static/media/fa-solid-900.woff2") format("woff2");
+}
+
 
 .gradient-bg-badge {
   background: linear-gradient(45deg, #e5f0ff, #FFE8DB);
