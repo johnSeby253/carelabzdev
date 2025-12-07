@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 @import "aos/dist/aos.css";
 
@@ -16,14 +15,6 @@
   background: linear-gradient(90deg, #f15c30, #2575b6);
   
 }
-
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 .gradient-bg-badge {
   background: linear-gradient(45deg, #e5f0ff, #FFE8DB);
 }
@@ -73,7 +64,7 @@
 .curved-Text{
   font-size: 14px;
   font-weight: 500;
-   font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
 }
 .primary-color{
   color: #157DE5;
@@ -87,15 +78,15 @@
   background:#FF7038;
 }
 .montserrat-font {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
 }
 
 .poppins-font {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-primary);
 }
 .title-Text{
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
 }
 .para-text{
   color: #65758b;

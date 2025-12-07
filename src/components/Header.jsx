@@ -9,6 +9,7 @@ import * as LucideIcons from 'lucide-react';
 import { useParams, useRouter } from "next/navigation";
 import { useLocalizedNavigate } from '@/lib/navigation';
 import ContactPopupModal from './Modal/ContactPopupModal';
+import Image from 'next/image';
 
 
 
@@ -146,10 +147,13 @@ const Header = () => {
           <div className="logo flex item center justify-center w-[50%] sm:w-[40%]  lg:w-[22%] ">
             <Link href={currentLocale ? `/${currentLocale}/` : "/"}>
               <img
-                className="p-3 md:w-[60%] lg:w-[75%]"
+                className="w-[200px] h-auto"
                 src={navbarData.Logo?.url}
                 alt="Logo"
+             
               />
+
+
             </Link>
           </div>
 
@@ -243,9 +247,9 @@ const Header = () => {
               onClick={openMobilemenus}
             >
               {openMobileMenu ? (
-                <LucideIcons.X size={30}  strokeWidth={3} />
+                <LucideIcons.X size={30} strokeWidth={3} />
               ) : (
-                <LucideIcons.Menu  size={30} strokeWidth={3} />
+                <LucideIcons.Menu size={30} strokeWidth={3} />
               )}
             </div>
 
