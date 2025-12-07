@@ -4,30 +4,31 @@ import React, { useState, useEffect } from 'react'
 import client from '@/lib/appollo-client'
 import { GET_FOOTER } from '@/lib/api-Collection'
 import * as LucideIcons from "lucide-react";
+import Image from 'next/image';
 
 const Footer = () => {
- const [footerData, setFooterData] = useState(null)
+  const [footerData, setFooterData] = useState(null)
 
- const fetchFooter = async () => {
+  const fetchFooter = async () => {
     try {
-        const response = await client.query({
-            query:GET_FOOTER
-        });
-        console.log("footerData:", response.data.footer)
+      const response = await client.query({
+        query: GET_FOOTER
+      });
+      console.log("footerData:", response.data.footer)
 
-        setFooterData(response.data.footer)
+      setFooterData(response.data.footer)
     } catch (error) {
-        console.log("Error fetching footer:", error);
+      console.log("Error fetching footer:", error);
     }
- }
+  }
 
- useEffect(()=> {
+  useEffect(() => {
     fetchFooter()
- },[])
+  }, [])
 
- if(!footerData) return null
+  if (!footerData) return null
 
- const { logo, description, socialLinks, footerMenu, bottomLinks, copyrightText } =
+  const { logo, description, socialLinks, footerMenu, bottomLinks, copyrightText } =
     footerData;
 
   return (
@@ -72,7 +73,7 @@ const Footer = () => {
     // </div>
 
     // </div>
-    
+
     <div>
       {/* MAIN FOOTER BLOCK */}
       <div className="w-full footer-background md:h-[350px] lg:h-[400px] py-20 flex justify-center">
@@ -83,22 +84,26 @@ const Footer = () => {
 
             {/* LOGO + DESC + SOCIAL LINKS */}
             <div className="flex-1 flex flex-col gap-4 text-gray-50">
-              <img
-                className="w-32 md:w-55"
+              <Image
                 src={logo?.url}
                 alt="Footer Logo"
+                width={180}             // match real logo ratio
+                height={60}
+                className="w-32 md:w-55 h-auto"
+                sizes="(min-width: 768px) 220px, 128px"
+                loading="lazy"          // footer → lazy is okay
               />
               <p className="text-sm text-[#808898] ">{description}</p>
 
               <div className="flex gap-3">
                 {socialLinks?.map((item, idx) => {
                   const IconComponent = LucideIcons[item.icon];
-                  if (!IconComponent) return null; 
+                  if (!IconComponent) return null;
 
                   return (
                     <a
                       key={idx}
-                      href={item.url || "#"} 
+                      href={item.url || "#"}
                       className="w-10 h-10 flex items-center justify-center rounded-full bg-[#092141] text-[#157DE4] hover:bg-[#157DE4] hover:text-white transition-colors duration-300"
                     >
                       <IconComponent className="w-4 h-4" />
@@ -143,9 +148,8 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  
+
   )
 }
 
 export default Footer
- 

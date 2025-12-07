@@ -146,11 +146,14 @@ const Header = () => {
         <div className="header w-full  h-full flex items-center justify-between lg:justify-center  2xl:p-3 ">
           <div className="logo flex item center justify-center w-[50%] sm:w-[40%]  lg:w-[22%] ">
             <Link href={currentLocale ? `/${currentLocale}/` : "/"}>
-              <img
-                className="w-[200px] h-auto"
+              <Image
                 src={navbarData.Logo?.url}
                 alt="Logo"
-             
+                width={200}
+                height={50}        // you must provide width/height for no layout shift
+                priority           // 🚀 marks image as high priority for LCP
+                fetchPriority="high"
+                className="w-[200px] h-auto"
               />
 
 
