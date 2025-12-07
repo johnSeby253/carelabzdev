@@ -130,12 +130,13 @@ if (!homeData) {
 
   return (
     <>
-<div className="home-cover relative min-h-screen w-full top-[90px] flex flex-col items-center justify-center">
+<div className="home-cover relative min-h-screen w-full pt-[90px]
+ flex flex-col items-center justify-center">
   {/* Section 1 */}
   <div 
-  data-aos="fade-up"
-  data-aos-duration="2000"
-  className="homeBanner  w-[90%] flex flex-col items-center justify-center 
+ data-aos="fade"
+data-aos-duration="0"
+  className="homeBanner  w-[90%] min-h-[70vh] flex flex-col items-center justify-center 
   border border-[#0f172914] glass-panel1  p-4
    md:w-[85%] md:mt-2  md:p-6
    lg:mt-5
@@ -289,8 +290,8 @@ if (!homeData) {
       {/* Stats */}
 
 <div
-  data-aos="fade-up"
-  data-aos-duration="2000"
+ data-aos="fade"
+data-aos-duration="0"
   className="
     w-full flex items-center justify-center py-8
   "
