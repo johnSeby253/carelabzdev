@@ -169,7 +169,7 @@ if (!homeData) {
   {/* Title 1 */}
   <p className="
      font-bold gradient-text
-     text-[32px] leading-[40px]
+     text-[32px] leading-[40px] min-h-[40px]
      sm:text-[42px] sm:leading-[52px]
      md:text-[54px] md:leading-[62px]
      lg:text-[72px] lg:leading-[72px] lg:whitespace-nowrap
@@ -180,7 +180,7 @@ if (!homeData) {
   {/* Title 2 */}
   <p className="
      font-bold
-     text-[32px] leading-[40px]
+     text-[32px] leading-[40px]  min-h-[40px]
      sm:text-[42px] sm:leading-[52px]
      md:text-[54px] md:leading-[62px]
      lg:text-[72px] lg:leading-[72px] lg:whitespace-nowrap
@@ -190,7 +190,7 @@ if (!homeData) {
 
   {/* Title 3 */}
   <p className="
-     font-bold text-[#157de5]
+     font-bold text-[#157de5]  min-h-[40px]
      text-[32px] leading-[40px]
      sm:text-[42px] sm:leading-[52px]
      md:text-[54px] md:leading-[62px]
@@ -263,7 +263,7 @@ if (!homeData) {
         cursor-pointer
       "
     >
-      <Play size={14} />
+     <Play className="w-5 h-5 shrink-0" />
       {homeData.btn2_text}
     </button>
 
