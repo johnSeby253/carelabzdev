@@ -135,7 +135,7 @@ if (!homeData) {
   {/* Section 1 */}
   <div 
  data-aos="fade"
-data-aos-duration="0"
+data-aos-duration="2000"
   className="homeBanner  w-[90%] min-h-[70vh] flex flex-col items-center justify-center 
   border border-[#0f172914] glass-panel1  p-4
    md:w-[85%] md:mt-2  md:p-6
