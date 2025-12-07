@@ -266,7 +266,7 @@ const Header = () => {
           <div className="sub-menu-cards absolute top-[80px] w-full flex justify-center z-50"
           >
 
-            <div className="w-[65%] h-[500px] bg-white mt-2 rounded-2xl hidden lg:flex items-center justify-evenly p-6 navbar-shadow fixed"
+            <div className="w-[65%] min-h-[500px] bg-white mt-2 rounded-2xl hidden lg:flex items-center justify-evenly p-6 navbar-shadow fixed"
               onMouseLeave={() => setActiveIndex(null)}>
 
               {/* LEFT SECTION */}
@@ -319,9 +319,9 @@ const Header = () => {
 
                   <div className=" w-full flex items-center gap-3">
                     {ActiveIcon && (
-                      <ActiveIcon className="w-5 h-5 text-[#157de5]" />
+                      <ActiveIcon className="w-5 h-5  text-[#157de5]" />
                     )}
-                    <h3 className="text-[14px] w-[15%] text-center p-1 rounded-full text-blue-600 bg-blue-200">{navbarData.items[activeIndex].badge}</h3>
+                    <h3 className="text-[14px] w-fit text-center px-4 py-1 rounded-full text-blue-600 bg-blue-200">{navbarData.items[activeIndex].badge}</h3>
                   </div>
 
 
@@ -353,7 +353,7 @@ const Header = () => {
                         </span>
                       </Link> */}
 
-                  <Link href={targetSlug} className="group relative inline-flex items-center justify-center bg-[#157de5] text-white text-[14px] font-semibold py-2 px-4 rounded-full w-[45%] text-center transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#157de5] hover:to-[#ff7038] hover:shadow-[0_20px_30px_rgba(0,0,0,0.3)]">
+                  <Link href={targetSlug} className="group relative inline-flex items-center justify-center bg-[#157de5] text-white text-[14px] font-semibold py-2 px-4 rounded-full w-fit  text-center transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#157de5] hover:to-[#ff7038] hover:shadow-[0_20px_30px_rgba(0,0,0,0.3)]">
                     <span className="flex items-center gap-2">
                       {currentSubmenu?.Button}
                       <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

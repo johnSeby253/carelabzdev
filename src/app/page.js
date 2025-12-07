@@ -89,122 +89,276 @@ useEffect(() => {
 
 
 if (!homeData) {
-   return (
-      <div className="w-full h-screen flex flex-col items-center justify-center gap-6 p-4">
+  return (
+    <div className="w-full min-h-[calc(100vh-90px)] flex flex-col items-center justify-center gap-6 p-4">
+      
+      <div className="
+        w-[90%]
+        max-w-[1152px]
+        min-h-[600px] sm:min-h-[650px] md:min-h-[720px] lg:min-h-[800px]
+        bg-gray-200 rounded-[40px] 
+        p-6 animate-pulse
+        flex flex-col gap-6
+      ">
+        
+        {/* Title block */}
+        <div className="w-1/2 h-8 bg-gray-300 rounded-lg"></div>
+        <div className="w-3/4 h-10 bg-gray-300 rounded-lg"></div>
+        <div className="w-2/3 h-10 bg-gray-300 rounded-lg"></div>
 
-        {/* Skeleton for main card / hero section */}
-        <div className="w-[80%]  h-[90%] flex items-center justify-center bg-gray-200 rounded-2xl p-4 animate-pulse flex-col gap-4">
-          
-          {/* Large placeholder for main heading */}
-          <div className="w-full h-full bg-gray-300 rounded-lg"></div>
+        {/* Description */}
+        <div className="w-full h-6 bg-gray-300 rounded-lg"></div>
+        <div className="w-5/6 h-6 bg-gray-300 rounded-lg"></div>
 
-          {/* Placeholder for subheading */}
-          <div className="w-3/4 h-8 bg-gray-300 rounded-lg"></div>
-
-          {/* Inner content / stats placeholders */}
-          <div className="w-full flex flex-col sm:flex-row items-center  justify-between gap-4 mt-4">
-            <div className="w-full sm:w-[30%] h-24 bg-gray-300 rounded-lg"></div>
-            <div className="w-full sm:w-[30%] h-24 bg-gray-300 rounded-lg"></div>
-            <div className="w-full sm:w-[30%] h-24 bg-gray-300 rounded-lg"></div>
-          </div>
-
+        {/* Buttons */}
+        <div className="w-full flex gap-4 mt-4">
+          <div className="w-[202px] h-[44px] bg-gray-300 rounded-full"></div>
+          <div className="w-[202px] h-[44px] bg-gray-300 rounded-full"></div>
         </div>
-      </div>
-   );
 
+        {/* Stats */}
+        <div className="w-full flex flex-col sm:flex-row gap-4 mt-6">
+          <div className="w-full sm:w-1/3 h-24 bg-gray-300 rounded-xl"></div>
+          <div className="w-full sm:w-1/3 h-24 bg-gray-300 rounded-xl"></div>
+          <div className="w-full sm:w-1/3 h-24 bg-gray-300 rounded-xl"></div>
+        </div>
+
+      </div>
+    </div>
+  );
 }
 
   return (
     <>
-<div className="home-cover relative w-full top-[30px] flex flex-col items-center justify-center">
-  {/* Section 1: Hero Banner */}
-  <div
-    data-aos="fade-up"
-    data-aos-duration="2000"
-    className="homeBanner w-[90%] md:w-[85%] lg:w-[80%] 2xl:w-[65%] glass-panel1 p-4 md:p-6 xl:mt-16 rounded-[40px] flex flex-col items-center justify-center min-h-[600px]"
+<div className="home-cover relative min-h-screen w-full top-[90px] flex flex-col items-center justify-center">
+  {/* Section 1 */}
+  <div 
+  data-aos="fade-up"
+  data-aos-duration="2000"
+  className="homeBanner  w-[90%] flex flex-col items-center justify-center 
+  border border-[#0f172914] glass-panel1  p-4
+   md:w-[85%] md:mt-2  md:p-6
+   lg:mt-5
+  xl:w-[80%] xl:mt-16
+  2xl:mt-0 2xl:w-[65%]"
+
+//   className="
+//   homeBanner
+//   w-full max-w-[1152px]
+//   min-h-[600px] md:h-[758px]
+//   flex flex-col items-center justify-center
+//   bg-white/90
+//   rounded-[40px]
+//   border border-[#0f172914]
+//   overflow-hidden
+//   glass-panel1
+//   p-4 sm:p-6 md:p-10
+// "
+
+
+  
   >
     <div className="w-full rounded-[40px] flex flex-col items-center justify-evenly space-y-6 md:space-y-8">
 
       {/* Heading Button */}
       <div className="flex justify-center items-center">
-        <button className="px-4 flex items-center justify-center gap-2 py-2 border border-[#157de54d] rounded-full">
+        <button className="px-4 flex items-center justify-center gap-2 py-2 border border-[#157de54d] rounded-full ">
           <div className="text-[#157de5]">
-            <Zap size={18} />
+              <Zap size={18} />
           </div>
+
           <div>
-            <p className="curved-Text text-[14px] montserrat-font">{homeData.heading}</p>
+             <p className="curved-Text text-[14px] montserrat-font">{homeData.heading}</p>
           </div>
+          
+          
         </button>
       </div>
 
-      {/* Titles */}
-      <div className="flex flex-col items-center justify-center text-center w-auto max-w-[900px] mx-auto montserrat-font space-y-1 sm:space-y-2 md:space-y-3">
-        <p className="font-bold gradient-text text-[32px] leading-[40px] min-h-[40px] sm:text-[42px] sm:leading-[52px] md:text-[54px] md:leading-[62px] lg:text-[72px] lg:leading-[72px] lg:whitespace-nowrap">
-          {homeData.title1}
-        </p>
-        <p className="font-bold text-[32px] leading-[40px] min-h-[40px] sm:text-[42px] sm:leading-[52px] md:text-[54px] md:leading-[62px] lg:text-[72px] lg:leading-[72px] lg:whitespace-nowrap">
-          {homeData.title2}
-        </p>
-        <p className="font-bold text-[#157de5] text-[32px] leading-[40px] min-h-[40px] sm:text-[42px] sm:leading-[52px] md:text-[54px] md:leading-[62px] lg:text-[72px] lg:leading-[72px] lg:whitespace-nowrap">
-          {homeData.title3}
-        </p>
+
+      {/* Title */}
+
+<div className="flex flex-col items-center justify-center text-center 
+    w-auto max-w-[900px] mx-auto montserrat-font space-y-1 sm:space-y-2 md:space-y-3">
+
+  {/* Title 1 */}
+  <p className="
+     font-bold gradient-text
+     text-[32px] leading-[40px]  min-h-[32px]
+     sm:min-h-[42px] sm:text-[42px] sm:leading-[52px]
+     md:min-h-[54px] md:text-[54px] md:leading-[62px]
+     lg:min-h-[72px] lg:text-[72px] lg:leading-[72px] lg:whitespace-nowrap
+  ">
+    {homeData.title1}
+  </p>
+
+  {/* Title 2 */}
+  <p className="
+     font-bold
+     text-[32px] leading-[40px]  min-h-[32px]
+     sm:min-h-[42px] sm:text-[42px] sm:leading-[52px]
+     md:min-h-[54px] md:text-[54px] md:leading-[62px]
+     lg:min-h-[72px] lg:text-[72px] lg:leading-[72px] lg:whitespace-nowrap
+  ">
+    {homeData.title2}
+  </p>
+
+  {/* Title 3 */}
+  <p className="
+     font-bold text-[#157de5] 
+     text-[32px] leading-[40px]  min-h-[32px]
+     sm:min-h-[42px] sm:text-[42px] sm:leading-[52px]
+     md:min-h-[54px] md:text-[54px] md:leading-[62px]
+     lg:min-h-[72px] lg:text-[72px] lg:leading-[72px] lg:whitespace-nowrap
+  ">
+    {homeData.title3}
+  </p>
+
+</div>
+
+
       </div>
 
       {/* Description */}
       <div className="w-full flex items-center justify-center text-center px-4 md:px-8">
-        <div className="w-full md:w-11/12 text-[20px] md:text-xl py-5">
+        <div className="w-full md:w-11/12 text-[20px]   md:text-xl py-5 ">
           <p className="para-text poppins-font">{homeData.description}</p>
         </div>
       </div>
 
+
       {/* Buttons */}
+
+
       <div className="w-full flex items-center justify-center py-4">
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center w-full md:w-3/5">
-          <button
-            onClick={(e) => { e.preventDefault(); window.openContactModal(); }}
-            className="group w-[202px] h-[44px] bg-[#FF7038] text-white rounded-[9999px] flex items-center justify-center gap-2 text-[14px] poppins-font font-medium transition-all duration-300 hover:bg-[#FF4C05] cursor-pointer"
-          >
-            {homeData.btn1_text}
-            <ArrowRight size={14} className="transform transition-transform duration-300 group-hover:translate-x-1" />
-          </button>
+  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center w-full md:w-3/5">
 
-          <button
-            onClick={openRandomVideo}
-            className="w-[202px] h-[44px] bg-white text-gray-800 border border-gray-300 rounded-[9999px] flex items-center justify-center gap-2 text-[14px] poppins-font font-medium transition-all duration-300 hover:bg-[#FF7038] hover:text-white hover:border-[#307FE2] cursor-pointer"
-          >
-            <Play className="w-5 h-5 shrink-0" />
-            {homeData.btn2_text}
-          </button>
-        </div>
-      </div>
+    {/* PRIMARY BUTTON — ORANGE */}
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+        window.openContactModal();
+      }}
+      className="
+        group 
+        w-[202px] h-[44px]
+        bg-[#FF7038] text-white 
+        rounded-[9999px]
+        flex items-center justify-center gap-2
+        text-[14px] poppins-font font-medium
+        transition-all duration-300
+        hover:bg-[#FF4C05]
+        cursor-pointer
+      "
+    >
+      {homeData.btn1_text}
+      <ArrowRight size={14}
+      className="
+      transform
+      transition-transform duration-300 
+      group-hover:translate-x-1   
+    "
+      />
+      
+    </button>
 
-      {/* Stats */}
-      <div data-aos="fade-up" data-aos-duration="2000" className="w-full flex items-center justify-center py-8">
-        <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-[24px]">
-          {homeData.stats?.map((item, idx) => {
-            const numberColor = idx === 1 ? "#FF7038" : "#157DE5";
-            return (
-              <div
-                key={item.id}
-                className="w-[324.66px] h-[126px] bg-white rounded-[24px] border border-[#307FE2]/10 flex flex-col items-center justify-center shadow-[0_18px_45px_rgba(15,23,42,0.10)] transition-all duration-500 hover:scale-[1.04] hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.12)]"
-              >
-                <div className="w-full h-[48px] flex items-center justify-center">
-                  <p className="text-4xl font-extrabold montserrat-font" style={{ color: numberColor }}>
-                    <HomeCounter end={item.number} duration={2} color={numberColor} />
-                  </p>
-                </div>
-                <div className="w-full h-[20px] flex items-center justify-center">
-                  <p className="text-[14px] poppins-font text-[#65758B]">{item.label}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
+    {/* SECONDARY BUTTON — BORDERED */}
+    <button
+      onClick={openRandomVideo}
+      className="
+        w-[202px] h-[44px]
+        bg-white text-gray-800 
+        border border-gray-300
+        rounded-[9999px]
+        flex items-center justify-center gap-2
+        text-[14px] poppins-font font-medium
+        transition-all duration-300
+        hover:bg-[#FF7038] hover:text-white
+        hover:border-[#307FE2]
+        cursor-pointer
+      "
+    >
+     <Play className="w-5 h-5 shrink-0" />
+      {homeData.btn2_text}
+    </button>
+
   </div>
 </div>
 
+
+      {/* Stats */}
+
+<div
+  data-aos="fade-up"
+  data-aos-duration="2000"
+  className="
+    w-full flex items-center justify-center py-8
+  "
+>
+  <div
+    className="
+      w-full 
+      flex flex-col sm:flex-row
+      items-center justify-between
+      gap-6 sm:gap-[24px]
+    "
+  >
+    {homeData.stats?.map((item, idx) => {
+      let numberColor =
+        idx === 1 ? "#FF7038" : "#157DE5";
+
+      return (
+        <div
+          key={item.id}
+          className="
+            w-[324.66px] h-[126px]
+            bg-white
+            rounded-[24px]
+            border border-[#307FE2]/10 
+            flex flex-col items-center justify-center
+            shadow-[0_18px_45px_rgba(15,23,42,0.10)]
+            transition-all duration-500
+            hover:scale-[1.04] hover:-translate-y-1 
+            hover:shadow-[0_22px_55px_rgba(15,23,42,0.12)]
+          "
+          style={{
+            opacity: 0,
+            transform: "translateY(10px) scale(0.95)",
+            animation: `popIn 0.6s ease-out forwards`,
+            animationDelay: `${idx * 0.15}s`,
+          }}
+        >
+          {/* NUMBER */}
+          <div className="w-full h-[48px] flex items-center justify-center">
+            <p
+              className="
+                text-4xl font-extrabold montserrat-font
+              "
+              style={{ color: numberColor }}
+            >
+              <HomeCounter
+                end={item.number}
+                duration={2}
+                color={numberColor}
+              />
+            </p>
+          </div>
+
+          {/* LABEL */}
+          <div className="w-full h-[20px] flex items-center justify-center">
+            <p className="text-[14px] poppins-font text-[#65758B]">
+              {item.label}
+            </p>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>
+
+
+  </div>
+</div>
 
 
 {/* section-2 */}
