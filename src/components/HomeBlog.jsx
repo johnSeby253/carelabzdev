@@ -79,12 +79,15 @@ if (!featured) {
             </p>
             </div>
 
-            <Link href="/services/power-system-analysis" legacyBehavior>
-              <a className="px-5 py-3 border border-[#1F8FEB] text-[#1F8FEB] rounded-[12px]
-              inline-block poppins-font text-center w-full sm:w-auto hover:bg-[#E9EDF5] transition-all duration-300 animate-pop-in ">
-                {insights.button}
-              </a>
-            </Link>
+      <Link
+          href="/services/power-system-analysis"
+          className="px-5 py-3 border border-[#1F8FEB] text-[#1F8FEB] rounded-[12px]
+            inline-block poppins-font text-center w-full sm:w-auto hover:bg-[#E9EDF5]
+            transition-all duration-300 animate-pop-in"
+        >
+          {insights.button}
+        </Link>
+
 
         </div>
 

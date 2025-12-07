@@ -2,12 +2,20 @@
 const nextConfig = {
   reactCompiler: true,
 
+  // 🚀 Modern JavaScript only (removes ES5 polyfills)
   experimental: {
-    legacyBrowsers: false,   // 🚀 removes polyfills for older browsers
-    optimizePackageImports: ['lucide-react'], // 🚀 reduces bundle size
+    legacyBrowsers: false,
+    forceSwcTransforms: true,            // FULL removal of unnecessary JS transforms
+    esmExternals: true,                  // Prefer ES modules over CommonJS
+    optimizePackageImports: ["lucide-react"],
   },
 
-   images: {
+  // 🚀 Performance improvements
+  swcMinify: true,
+  optimizeFonts: true,
+  optimizeCss: true,
+
+  images: {
     remotePatterns: [
       {
         protocol: "https",
