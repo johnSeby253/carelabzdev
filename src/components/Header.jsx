@@ -239,15 +239,16 @@ const Header = () => {
 
 
             <div
-              className="menu-bar w-[15%] h-full flex items-center justify-center p-2 z-[999] lg:hidden"
+              className="menu-bar  h-full flex items-center justify-center p-4 z-[999] lg:hidden"
               onClick={openMobilemenus}
             >
               {openMobileMenu ? (
-                <i className="fa-solid fa-x fa-xl" style={{ color: "#000000" }}></i>
+                <LucideIcons.X size={30}  strokeWidth={3} />
               ) : (
-                <i className="fa-solid fa-bars fa-xl" style={{ color: "#000000" }}></i>
+                <LucideIcons.Menu  size={30} strokeWidth={3} />
               )}
             </div>
+
 
 
           </div>
@@ -447,7 +448,7 @@ const Header = () => {
         </div>
       )}
 
-  
+
 
 
 

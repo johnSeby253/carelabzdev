@@ -17,7 +17,12 @@
   
 }
 
-
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 .gradient-bg-badge {
   background: linear-gradient(45deg, #e5f0ff, #FFE8DB);
