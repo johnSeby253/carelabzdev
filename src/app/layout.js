@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import Footer from "@/components/Footer";
 import QuoteBar from "@/components/QuoteBar";
 import { Montserrat, Poppins } from "next/font/google";
+import Script from "next/script";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -52,8 +53,10 @@ export default function RootLayout({ children }) {
 
         
         {/* cloudflare */}
-        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
+<Script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  strategy="afterInteractive"
+/>
 
       </body>
     </html>
